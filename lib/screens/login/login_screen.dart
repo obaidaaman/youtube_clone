@@ -4,6 +4,7 @@ import 'package:youtube_clone/helper/form_divider.dart';
 import 'package:youtube_clone/helper/social_buttons.dart';
 import 'package:youtube_clone/screens/home/home.dart';
 import 'package:youtube_clone/screens/nav_screen/nav_screen.dart';
+import 'package:youtube_clone/screens/signUp/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -129,13 +130,19 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20),
-                child: Text(
-                  'Dont have an account? Sign Up',
-                  textAlign: TextAlign.end,
-                  style: TextStyle(
-                    color: Colors.redAccent,
-                    fontStyle: FontStyle.italic,
-                    fontSize: 15,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => SignupScreen()));
+                  },
+                  child: Text(
+                    'Dont have an account? Sign Up',
+                    textAlign: TextAlign.end,
+                    style: TextStyle(
+                      color: Colors.redAccent,
+                      fontStyle: FontStyle.italic,
+                      fontSize: 15,
+                    ),
                   ),
                 ),
               ),

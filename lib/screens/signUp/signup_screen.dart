@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:youtube_clone/helper/form_divider.dart';
 import 'package:youtube_clone/helper/social_buttons.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     final mq = MediaQuery.of(context).size;
